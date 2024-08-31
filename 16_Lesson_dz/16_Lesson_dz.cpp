@@ -5,24 +5,28 @@ int main()
 {
 	const int N = 5;
 	int arr[N][N]{};
-
+	
+	// заполнение масива
 	for (int i = 0; i < N; i++)
 	{
 		for(int j = 0; j < N; j++)
 		{
 			arr[i][j] = i + j;
-			cout << arr[i][j];
+			cout << arr[i][j];// вывидение масива в консоль
 		}
 		cout << endl;
 	}
 
 	int sum = 0;
-	int day = 31;
-	int index = day % N;
+	int day = 31;// Текущий день
+	int index = day % N;// Индек строки
 
-	for (int j = 0; j < N; j++) 
+	// Вычисление суммы элементов в строке
+	for (int j = 0; j < N; j++)
 	{
 		sum += arr[index][j];
 	}
-	cout << sum;
+
+	// Вывод суммы
+	cout << "Сумма элементов в строке " << index << ": " << sum << endl;
 }
